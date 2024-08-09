@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>록시땅</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        $(function(){
+            var swiper = new Swiper(".main_img", {
+                autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },    
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            });
+            //main_visual
+
+            var swiper = new Swiper(".best_img", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    },
+                    960: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                    },
+                    1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 12,
+                    },
+                },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            });
+            $('.best a').click(function(event){
+                event.preventDefault();
+            });
+            //best
+
+            var swiper = new Swiper(".collSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                },
+                768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+                },
+                1024: {
+                slidesPerView: 4,
+                spaceBetween: 12,
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            });
+            $('.coll a').click(function(event){
+                event.preventDefault();
+            });
+            //coll
+
+            let right = document.querySelectorAll('.all .right .item');
+            let left = document.querySelectorAll('.all .left figure img');
+
+            for(let i = 0; i < right.length; i++){
+                right[i].addEventListener('mouseenter', () => {
+                    left.forEach((img) => {
+                        img.classList.remove('on');
+                    })
+                    left[i].classList.add('on');
+                });
+            }
+            //all
+
+            let leftBox = document.querySelectorAll('.last .left .btn');
+            let rightBox = document.querySelectorAll('.last .right figure img')
+
+            for(let i = 0; i < leftBox.length; i++){
+                leftBox[i].addEventListener('mouseenter', () => {
+                    //alert()
+                    rightBox.forEach((img) => {
+                        img.classList.remove('on');
+                    })
+                    leftBox.forEach((leftImg) => {
+                        leftImg.classList.remove('on');
+                    })
+                    leftBox[i].classList.add('on');
+                    rightBox[i].classList.add('on');
+                });
+            }
+        });//scripet end
+    </script>
+</head>
+<body>
+    <header id="header"></header>
+    <main id="main">
+        <section class="main_visual">
+            <div class="swiper main_img">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure>
+                        <img src="img/main01.jpg" alt="사진">
+                    </figure>
+                    <div class="text">
+                        <h2>회원이라면 누구나! <br>
+                            일주일간의 특별한 혜택을 만나보세요.
+                        </h2>
+                        <h4>공식몰 멤버십 위크</h4>
+                        <p>기간: 7/22(월)~7/28(일)</p>
+                        <span>*공식몰 신규 및 기존 회원 전용</span>
+                        <a href="#">자세히보기</a>
+                    </div><!-- text end -->
+                  </div><!-- swiper-slide end -->
+
+                  <div class="swiper-slide">
+                    <figure>
+                        <img src="img/main02.jpg" alt="사진">
+                    </figure>
+                    <div class="text">
+                        <h2>2024 제라늄 버베나 컬렉션</h2>
+                        <p>달콤한 행복을 가져다 줄 싱그러운 여름날의 향기</p>
+                        <a href="#">자세히보기</a>
+                    </div><!-- text end -->
+                  </div><!-- swiper-slide end -->
+
+                  <div class="swiper-slide">
+                    <figure>
+                        <img src="img/main03.jpg" alt="사진">
+                    </figure>
+                    <div class="text">
+                        <h2>무더운 여름
+                            나를 위한 필수템
+                        </h2>
+                        <p>Summer EssenTial Care</p>
+                        <a href="#">자세히보기</a>
+                    </div><!-- text end -->
+                  </div><!-- swiper-slide end -->
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+        </section><!-- main_visual end -->
+
+        <section class="section01">
+            <div class="inner">
+                <div class="left">
+                    <figure>
+                        <img src="img/main_left.jpg" alt="메인광고">
+                    </figure>
+                    <div class="item">
+                        <img src="img/20240613home1_114x114.png" alt="img">
+                        <div class="item_text">
+                            <p>첫 구매 고객 15% 할인</p>
+                            <span>공식몰 신규 가입 후 첫 구입 시 혜택 적용</span>
+                        </div>
+                    </div><!-- text end -->
+                </div><!-- left end -->
+                
+                <div class="right">
+                    <figure>
+                        <img src="img/main_right.jpg" alt="메인광고">
+                    </figure>
+                    <div class="item">
+                        <img src="img/20240718membershipweek3_114x114_3.png" alt="img">
+                        <text_item>
+                            <p>공식몰 단독 특별 사은품</p>
+                            <span>7 / 10 / 15만원 이상 구매 시 사은품 증정</span>
+                        </text_item>
+                    </div><!-- text end -->
+                </div><!-- left end -->
+            </div><!-- inner end -->
+        </section><!-- section01 end -->
+
+        <section class="member">
+            <div class="inner">
+                <h2>멤버십 위크 구매별 혜택</h2>
+                <div class="btn">
+                    <a href="#">
+                        <p>쇼핑하러 가기</p>
+                        <img src="img/icons8-right-arrow-48.png" alt="right">
+                    </a>
+                </div><!-- btn end -->
+
+                <div class="list">
+                    <div class="left">
+                        <a href="#">
+                            <figure>
+                                <img src="img/member_left.jpg" alt="img">
+                            </figure>
+                            <div class="text">
+                                <h4>전구매 혜택</h4>
+                                <p>모든 구매 고객님께 <strong>필로우 미스트 15ml 증정</strong></p>
+                                <span>
+                                    *주문당 1회 증정, 공식몰 회원만 적용 <br>
+                                    *로그인 시 장바구니에서 자동 적용
+                                </span>
+                            </div><!-- text end -->
+                        </a>
+                    </div><!-- left end -->
+
+                    <div class="right">
+                        <a href="#">
+                            <figure>
+                                <img src="img/member_right.jpg" alt="img">
+                            </figure>
+                            <div class="text">
+                                <h4>신규 가입 혜택</h4>
+                                <p>공식몰 가입 후 첫 구매 5만원 이상 구매시 <br>
+                                    <strong>15% 할인 + 시어 컴포팅 크림 8ml 증정</strong></p>
+                                <span>
+                                    *1인 1회 한정, 공식몰 회원만 적용 <br>
+                                    *5만원 이상 구매 시 적용 <br>
+                                    *주문 취소 시 재사용 불가
+                                </span>
+                            </div><!-- text end -->
+                        </a>
+                    </div><!-- right end -->
+                </div><!-- list end -->
+            </div><!-- inner end -->
+        </section><!-- member end -->
+
+        <section class="member02">
+            <div class="inner">
+                <h2>멤버십 위크 사은품 혜택</h2>
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <img src="img/menu02_1.jpg" alt="img">
+                        </figure>
+                        <p><strong>7만원 이상 구매 시</strong> <br>
+                        라벤더 릴랙싱 키트 증정</p>
+                        <span>
+                            *7/22(월)~7/28(일) 멤버십 위크 한정 <br>
+                            *세트 구매 시 제외
+                        </span>
+                    </div><!-- item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/menu02_2.jpg" alt="img">
+                        </figure>
+                        <p><strong>10만원 이상 구매 시</strong> <br>
+                        바캉스 바디 케어 키트 증정</p>
+                        <span>
+                            *7/22(월)~7/28(일) 멤버십 위크 한정 <br>
+                            *세트 구매 시 제외
+                        </span>
+                    </div><!-- item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/menu02_3.jpg" alt="img">
+                        </figure>
+                        <p><strong>15만원 이상 구매 시</strong> <br>
+                        바캉스 헤어 & 바디 키트 증정</p>
+                        <span>
+                            *7/22(월)~7/28(일) 멤버십 위크 한정 <br>
+                            *세트 구매 시 제외
+                        </span>
+                    </div><!-- item end -->
+                </div><!-- list end -->
+                
+                <a href="#">자세히 보기</a>
+            </div><!-- inner end -->
+        </section><!-- member02 end -->
+
+        <section class="best">
+            <div class="inner">
+                <h2>베스트셀러 추천</h2>
+                <a href="#">더보기</a>
+                
+                <div class="list">
+                    <div class="swiper best_img">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <figure>
+                                <a href="#"><img src="img/best01.jpg" alt="best"></a>
+                            </figure>
+                            <div class="badge">
+                                <img src="img/NEW뱃지.png" alt="badge" class="bg1">
+                                <img src="img/LIMITED뱃지.png" alt="badge " class="bg2">
+                                <figure>
+                                    <a href="#"><img src="img/icons8-shopping-bag-64.png" alt="img"></a>
+                                </figure>
+                            </div><!-- badge end -->
+                            <div class="text">
+                                <a href="#">
+                                    <span>전 세계 베스트셀러 세럼</span>
+                                    <h5>이모르뗄 오버나이트 리셋 오일 인 세럼 75ml</h5>
+                                    <strong>170,000원</strong>
+                                </a>
+                            </div><!-- text end -->
+                          </div><!-- swiper slide end -->
+
+                          <div class="swiper-slide">
+                            <figure>
+                                <a href="#"><img src="img/best02.jpg" alt="best"></a>
+                            </figure>
+                            <div class="badge">
+                                <img src="img/NEW뱃지.png" alt="badge" class="bg1">
+                                <img src="img/74x74_스칼프나이트세럼_01(002).png" alt="badge" class="bg2">
+                                <figure>
+                                    <a href="#"><img src="img/icons8-shopping-bag-64.png" alt="img"></a>
+                                </figure>
+                            </div><!-- badge end -->
+                            <div class="text">
+                                <a href="#">
+                                    <span>두피 장벽 강화</span>
+                                    <h5>스칼프 나이트 세럼 50ml</h5>
+                                    <strong>45,000원</strong>
+                                </a>
+                            </div><!-- text end -->
+                          </div><!-- swiper slide end -->
+
+                          <div class="swiper-slide">
+                            <figure>
+                                <a href="#"><img src="img/best03.jpg" alt="best"></a>
+                            </figure>
+                            <div class="badge">
+                                <img src="img/bestseller.png" alt="badge" class="bg1">
+                                <figure>
+                                    <a href="#"><img src="img/icons8-shopping-bag-64.png" alt="img"></a>
+                                </figure>
+                            </div><!-- badge end -->
+                            <div class="text">
+                                <a href="#">
+                                    <span>공식몰 단독</span>
+                                    <h5>[기프트] 아몬드 샤워 오일 500ml 세트</h5>
+                                    <strong>62,000원</strong>
+                                </a>
+                            </div><!-- text end -->
+                          </div><!-- swiper slide end -->
+
+                          <div class="swiper-slide">
+                            <figure>
+                                <a href="#"><img src="img/best04.jpg" alt="best"></a>
+                            </figure>
+                            <div class="badge">
+                                <figure>
+                                    <a href="#"><img src="img/icons8-shopping-bag-64.png" alt="img"></a>
+                                </figure>
+                            </div><!-- badge end -->
+                            <div class="text">
+                                <a href="#">
+                                    <span>공식몰 단독</span>
+                                    <h5>[기프트] 버베나 오 드 뚜왈렛 100ml 세트</h5>
+                                    <strong>80,000원</strong>
+                                </a>
+                            </div><!-- text end -->
+                          </div><!-- swiper slide end -->
+
+                          <div class="swiper-slide">
+                            <figure>
+                                <a href="#"><img src="img/best05.jpg" alt="best"></a>
+                            </figure>
+                            <div class="badge">
+                                <img src="img/bestseller.png" alt="badge" class="bg1">
+                                <figure>
+                                    <a href="#"><img src="img/icons8-shopping-bag-64.png" alt="img"></a>
+                                </figure>
+                            </div><!-- badge end -->
+                            <div class="text">
+                                <a href="#">
+                                    <span>록시땅 베스트셀러</span>
+                                    <h5>코쿤 드 세레니떼 릴랙싱 필로우 미스트 100ml</h5>
+                                    <strong>32,000원</strong>
+                                </a>
+                            </div><!-- text end -->
+                          </div><!-- swiper slide end -->
+
+                          <div class="swiper-slide">
+                            <figure>
+                                <a href="#"><img src="img/best06.jpg" alt="best"></a>
+                            </figure>
+                            <div class="badge">
+                                <figure>
+                                    <a href="#"><img src="img/icons8-shopping-bag-64.png" alt="img"></a>
+                                </figure>
+                            </div><!-- badge end -->
+                            <div class="text">
+                                <a href="#">
+                                    <span>재출시</span>
+                                    <h5>코쿤 드 세레니떼 릴랙싱 롤 온 10ml</h5>
+                                    <strong>32,000원</strong>
+                                </a>
+                            </div><!-- text end -->
+                          </div><!-- swiper slide end -->
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                </div>
+            </div><!-- inner end -->
+        </section><!-- best end -->
+
+        <section class="take">
+            <div class="inner">
+                <h2>Take time with L'OCCITANE</h2>
+                <a href="#">더보기</a>
+
+                <div class="list">
+                    <div class="left">
+                        <figure>
+                            <a href="#"><img src="img/tack_left.jpg" alt="img"></a>
+                        </figure>
+                        <div class="text">
+                            <h3>Take time with <br>
+                                 L'OCCITANE</h3>
+                            <h5>두 아이콘의 만남</h5>
+                            <p>록시땅 최초의 아시아 엠버서더 민규가 전하는 프로방스식 라이프 스타일을 만나보세요.</p>
+                        </div><!-- text end -->
+                    </div><!-- left end -->
+
+                    <div class="right">
+                        <div class="item">
+                            <div class="item_flex">
+                                <figure>
+                                    <a href="#">
+                                        <img src="img/tack_right1.jpg" alt="take">
+                                        <img src="img/29HD250A15_KR3.jpg" alt="take">
+                                    </a>
+                                </figure>
+                                <div class="badge">
+                                    <img src="img/bestseller.png" alt="badge" class="bg1">
+                                    <img src="img/eco-refill.png" alt="badge" class="bg2">
+                                    <figure>
+                                        <a href="#"><img src="img/icons8-shopping-bag-64.png" alt="img"></a>
+                                    </figure>
+                                </div><!-- badge end -->
+                                <div class="text">
+                                    <a href="#">
+                                        <h5>[민규 PICK] 아몬드 모이스펴라이징 샤워 오일 250ml</h5>
+                                        <strong>36,000원</strong>
+                                    </a>
+                                </div><!-- text end -->
+                            </div><!-- item_flex end -->
+                        </div><!-- item end -->
+
+                        <div class="item">
+                            <div class="item_flex">
+                                <figure>
+                                    <a href="#">
+                                        <img src="img/tack_right2.jpg" alt="take">
+                                        <img src="img/take_right2_2.jpg" alt="take">
+                                    </a>
+                                </figure>
+                                <div class="badge">
+                                    <img src="img/clean-charter.png" alt="badge" class="bg1">
+                                    <figure>
+                                        <a href="#"><img src="img/icons8-shopping-bag-64.png" alt="img"></a>
+                                    </figure>
+                                </div><!-- badge end -->
+                                <div class="text">
+                                    <a href="#">
+                                        <span>NO.1 핸드 크림</span>
+                                        <h5>[민규 PICK] 시어 버터 드라이 스킨 핸드 크림 150ml</h5>
+                                        <strong>39,000원</strong>
+                                    </a>
+                                </div><!-- text end -->
+                            </div><!-- item_flex end -->
+                        </div><!-- item end -->
+                    </div><!-- right end -->
+                </div><!-- list end -->
+            </div><!-- inner end -->
+        </section><!-- take end -->
+
+        <section class="coll">
+                <div class="top">
+                    <figure>
+                        <img src="img/main02.jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>2024 리미티드 에디션</h4>
+                        <h3>NEW 버베나 컬렉션</h3>
+                        <h5>달콤한 행복을 가져다 줄 싱그러운 여름날의 향</h5>
+                        <p>싱그러운 버베나와 허프 플로럴 향 제라늄의 은은한 시트러스 플로럴 향의 <br>
+                            2024 제라늄 버베나 컬렉션을 만나보세요.</p>
+                    </div><!-- text end -->
+                </div><!-- top end -->
+            <div class="inner">
+                <div class="bottom">
+                    <a href="#">더보기</a>
+                    <div class="swiper collSwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <a href="#">
+                                <figure>
+                                    <img src="img/coll_item1.jpg" alt="img">
+                                </figure>
+                                <div class="badge">
+                                    <img src="img/NEW뱃지.png" alt="badge" class="bg1">
+                                    <img src="img/LIMITED뱃지.png" alt="badge" class="bg2">
+                                    <figure>
+                                        <img src="img/icons8-shopping-bag-64.png" alt="img">
+                                    </figure>
+                                </div><!-- badge end -->
+                                <div class="text">
+                                    <span>공식몰 단독</span>
+                                    <h5>[기프트] 리미티드 버베나 샤워 젤 듀오 (+버베나 아이시 & 제라늄 버베나)</h5>
+                                    <strong>66,000원</strong>
+                                </div><!-- text end -->
+                            </a>
+                          </div><!-- swiper-slide end -->
+
+                          <div class="swiper-slide">
+                            <a href="#">
+                                <figure>
+                                    <img src="img/coll_item2.jpg" alt="img">
+                                </figure>
+                                <div class="badge">
+                                    <img src="img/LIMITED뱃지.png" alt="badge" class="bg1">
+                                    <figure>
+                                        <img src="img/icons8-shopping-bag-64.png" alt="img">
+                                    </figure>
+                                </div><!-- badge end -->
+                                <div class="text">
+                                    <span>NEW</span>
+                                    <h5>[기프트] 리미티드 버베나 제라늄 바디 케어 세트 (샤워 젤 & 바디 로션)</h5>
+                                    <strong>79,000원</strong>
+                                </div><!-- text end -->
+                            </a>
+                          </div><!-- swiper-slide end -->
+                          <div class="swiper-slide">
+                            <a href="#">
+                                <figure>
+                                    <img src="img/coll_item3.jpg" alt="img">
+                                </figure>
+                                <div class="badge">
+                                    <img src="img/NEW뱃지.png" alt="badge" class="bg1">
+                                    <img src="img/LIMITED뱃지.png" alt="badge" class="bg2">
+                                    <figure>
+                                        <img src="img/icons8-shopping-bag-64.png" alt="img">
+                                    </figure>
+                                </div><!-- badge end -->
+                                <div class="text">
+                                    <span>공식몰 단독</span>
+                                    <h5>[기프트] 리미티드 버베나 샤워 젤 & 바디 헤어 미스트 세트</h5>
+                                    <strong>55,000원</strong>
+                                </div><!-- text end -->
+                            </a>
+                          </div><!-- swiper-slide end -->
+                          <div class="swiper-slide">
+                            <a href="#">
+                                <figure>
+                                    <img src="img/coll_item4.jpg" alt="img">
+                                </figure>
+                                <div class="badge">
+                                    <img src="img/LIMITED뱃지.png" alt="badge" class="bg1">
+                                    <figure>
+                                        <img src="img/icons8-shopping-bag-64.png" alt="img">
+                                    </figure>
+                                </div><!-- badge end -->
+                                <div class="text">
+                                    <span>NEW</span>
+                                    <h5>[기프트] 리미티드 버베나 샤워 젤 & 리프레싱 바디 젤 크림 세트</h5>
+                                    <strong>75,000원</strong>
+                                </div><!-- text end -->
+                            </a>
+                          </div><!-- swiper-slide end -->
+                          <div class="swiper-slide">
+                            <a href="#">
+                                <figure>
+                                    <img src="img/coll_item5.jpg" alt="img">
+                                </figure>
+                                <div class="badge">
+                                    <img src="img/NEW뱃지.png" alt="badge" class="bg1">
+                                    <img src="img/LIMITED뱃지.png" alt="badge" class="bg2">
+                                    <figure>
+                                        <img src="img/icons8-shopping-bag-64.png" alt="img">
+                                    </figure>
+                                </div><!-- badge end -->
+                                <div class="text">
+                                    <span>공식몰 단독</span>
+                                    <h5>[기프트] 리미티드 버베나 오 드 뚜왈렛 세트</h5>
+                                    <strong>80,000원</strong>
+                                </div><!-- text end -->
+                            </a>
+                          </div><!-- swiper-slide end -->
+
+                          <div class="swiper-slide">
+                            <a href="#">
+                                <figure>
+                                    <img src="img/coll_item6.jpg" alt="img">
+                                </figure>
+                                <div class="badge">
+                                    <img src="img/LIMITED뱃지.png" alt="badge" class="bg1">
+                                    <figure>
+                                        <img src="img/icons8-shopping-bag-64.png" alt="img">
+                                    </figure>
+                                </div><!-- badge end -->
+                                <div class="text">
+                                    <span>NEW</span>
+                                    <h5>리미티드 버베나 아이시 바디 샤워 젤 250ml</h5>
+                                    <strong>33,000원</strong>
+                                </div><!-- text end -->
+                            </a>
+                          </div><!-- swiper-slide end -->
+
+                          <div class="swiper-slide">
+                            <a href="#">
+                                <figure>
+                                    <img src="img/coll_item7.jpg" alt="img">
+                                </figure>
+                                <div class="badge">
+                                    <img src="img/LIMITED뱃지.png" alt="badge" class="bg1">
+                                    <figure>
+                                        <img src="img/icons8-shopping-bag-64.png" alt="img">
+                                    </figure>
+                                </div><!-- badge end -->
+                                <div class="text">
+                                    <span>NEW</span>
+                                    <h5>리미티드 버베나 리프레싱 바디 젤 크림 150ml</h5>
+                                    <strong>42,000원</strong>
+                                </div><!-- text end -->
+                            </a>
+                          </div><!-- swiper-slide end -->
+
+                          <div class="swiper-slide">
+                            <a href="#">
+                                <figure>
+                                    <img src="img/coll_item8.jpg" alt="img">
+                                </figure>
+                                <div class="badge">
+                                    <img src="img/LIMITED뱃지.png" alt="badge" class="bg1">
+                                    <figure>
+                                        <img src="img/icons8-shopping-bag-64.png" alt="img">
+                                    </figure>
+                                </div><!-- badge end -->
+                                <div class="text">
+                                    <span>NEW</span>
+                                    <h5>리미티드 버베나 리프레싱 핸드 크림 라이트 30ml</h5>
+                                    <strong>16,000원</strong>
+                                </div><!-- text end -->
+                            </a>
+                          </div><!-- swiper-slide end -->
+
+                          <div class="swiper-slide">
+                            <a href="#">
+                                <figure>
+                                    <img src="img/coll_item9.jpg" alt="img">
+                                </figure>
+                                <div class="badge">
+                                    <img src="img/LIMITED뱃지.png" alt="badge" class="bg1">
+                                    <figure>
+                                        <img src="img/icons8-shopping-bag-64.png" alt="img">
+                                    </figure>
+                                </div><!-- badge end -->
+                                <div class="text">
+                                    <span>NEW</span>
+                                    <h5>리미티드 시트러스 버베나 바이 페이스 샤워 젤 200ml</h5>
+                                    <strong>35,000원</strong>
+                                </div><!-- text end -->
+                            </a>
+                          </div><!-- swiper-slide end -->
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                </div><!-- bottom end -->
+            </div><!-- inner end -->
+        </section><!-- coll end -->
+
+        <section class="review">
+            <div class="inner">
+                <h2>이 달의 추천 제품</h2>
+                <div class="review_flex">
+                    <div class="left">
+                        <figure>
+                            <img src="img/review.jpg" alt="img">
+                        </figure>
+                    </div><!-- left end -->
+                    <div class="right">
+                        <div class="text01">
+                            <h4>좋은 호텔이나 고급 스파에 가면 나는 싱그럽고 상큼한 시트러스한 향!</h4>
+                            <p>"아침에 일어나 샤워하는 시간이 즐겁고 생기 충전하게 되는 것 같아요. 거품도 곱게 잘 일어나고 씻고 나면 화장실에서 좋은 향이 가득차서 기분까지 좋아지는 바디 제품입니다."</p>
+                            <span>-닉네임 금*****, 버베나 샤워 젤</span>
+                            <a href="#">제품 보기</a>
+                        </div><!-- text end -->
+                        <div class="text02">
+                            <h4>우수 리뷰어 정품 증정 이벤트</h4>
+                            <p>우수 리뷰어 선정 시 버베나 핸드 크림 30ml 또는 버베나 샤워 젤 250ml 정품 증정</p>
+                            <a href="#">자세히 보기</a>
+                        </div><!-- text end -->
+                    </div><!-- right end -->
+                </div>
+            </div><!-- inner end -->
+        </section><!-- review end -->
+
+        <section class="all">
+            <div class="inner">
+                <h2>All About L'OCCITANE</h2>
+
+                <div class="list">
+                    <div class="left">
+                        <figure>
+                            <img src="img/all_left.jpg" alt="img" class="on">
+                            <img src="img/all_left1.jpg" alt="img">
+                            <img src="img/all_left5.jpg" alt="img">
+                            <img src="img/all_left3.jpg" alt="img">
+                        </figure>
+                        <div class="text">
+                            <h5>지속가능성 이야기</h5>
+                            <p>1970년, 자연의 경의로움을 공유하기 위해 스킨케어 제품 생산, 판매로 시작된 L'OCCITANE. 소중한 지구와 사람들을 존중하기 위한 록시땅의 지속가능한 노력들을 살펴보세요!</p>
+                        </div><!-- text end -->
+                    </div><!-- left end -->
+                    <div class="right">
+                        <div class="item_flex">
+                            <div class="item">
+                                <figure>
+                                    <img src="img/all_right1.jpg" alt="img">
+                                </figure>
+                                <div class="text">
+                                    <h5>Our Story is Divided <br>
+                                         into Four Chapters
+                                    </h5>
+                                    <a href="#">자세히 보기</a>
+                                </div>
+                            </div><!-- item end -->
+
+                            <div class="item">
+                                <figure>
+                                    <img src="img/all_right2.jpg" alt="img">
+                                </figure>
+                                <div class="text">
+                                    <h5>Six Promises of <br>
+                                         L'OCCITANE
+                                    </h5>
+                                    <a href="#">자세히 보기</a>
+                                </div>
+                            </div><!-- item end -->
+
+                            <div class="item">
+                                <figure>
+                                    <img src="img/all_right3.jpg" alt="img">
+                                </figure>
+                                <div class="text">
+                                    <h5>Proud to be B Corp</h5>
+                                    <a href="#">자세히 보기</a>
+                                </div>
+                            </div><!-- item end -->
+
+                            <div class="item">
+                                <figure>
+                                    <img src="img/all_right4.jpg" alt="img">
+                                </figure>
+                                <div class="text">
+                                    <h5>Group Sustainability</h5>
+                                    <a href="#">자세히 보기</a>
+                                </div>
+                            </div><!-- item end -->
+                        </div>
+                    </div><!-- right end -->
+                </div><!-- ltst end -->
+            </div><!-- inner end -->
+        </section><!-- all end -->
+
+        <section class="last">
+            <div class="inner">
+                <h2>매장 찾기</h2>
+                <div class="list">
+                    <div class="left">
+                        <div class="title">
+                            <h4>가까운 록시땅 매장을 찾아보세요!</h4>
+                            <p>가까운 록시땅 매장에서 프로방스의 아름다움을 경험해보세요</p>
+                        </div><!-- title end -->
+                        <a href="#">가까운 매장찾기</a>
+
+                        <div class="btn_list">
+                            <div class="btn on">
+                                <h5>AK PLAZA 분당점</h5>
+                                <p>경기도 성남시 분당구 황새울로 360번길 42 AK Plaza 1층 13591 성남시</p>
+                                <a href="tel:+82 31-8023-2151">+82 31-8023-2151</a>
+                            </div><!-- btn end -->
+                            <div class="btn">
+                                <h5>AK PLAZA 수원</h5>
+                                <p>경기도 수원시 팔달구 덕영대로 924 AK Plaza 1층 수원시 16622</p>
+                                <a href="tel:+82 31-240-1146">+82 31-240-1146</a>
+                            </div><!-- btn end -->
+                            <div class="btn">
+                                <h5>IFC몰</h5>
+                                <p>서울특별시 영등포구 국제금융로 10 IFC빌딩 B1 121호 서울특별시 07326</p>
+                                <a href="tel:+82 2-6137-5104">+82 2-6137-5104</a>
+                            </div><!-- btn end -->
+                        </div>
+                    </div><!-- left end -->
+
+                    <div class="right">
+                        <figure>
+                            <img src="img/last01.jpg" alt="img" class="on">
+                            <img src="img/last3.jpg" alt="img">
+                            <img src="img/last4.jpg" alt="img">
+                        </figure>
+                    </div><!-- right end -->
+                </div><!-- list end -->
+            </div><!-- inner end -->
+        </section><!-- last end -->
+
+        <section class="notice">
+            <div class="inner">
+                <figure>
+                    <img src="img/notice.jpg" alt="img">
+                </figure>
+                    <div class="text">
+                        <div class="text01">
+                            <h5>INIPAY 에스크로 가입 확인</h5>
+                            <p>록시땅 공식몰은 귀하의 결제 정보 보안을 최상의 상태로 유지하기 위하여 결제시, (주)이니시의 결제대금 예치서비스인 에스크로 서비스를 제공하고 있습니다.</p>
+                            <span>
+                                결제대금예업 등록번호:02-006-00013 <br>
+                                통신판매번호:2008-서울강남-0844
+                            </span>
+                        </div>
+
+                        <div class="text02">
+                            <h5>록시땅 공식몰 회원 5% 할인 혜택</h5>
+                            <p>록시땅 코리아 공식몰에 가입하여 구매하시는 모든 분들께 5% 할인 혜택을 상시 제공하고 있습니다. 공식목에서만 진행되는 특별 프로모도 놓치지 마세요.</p>
+                        </div>
+
+                        <div class="text03">
+                            <h5>고객 문의</h5>
+                            <p>
+                                록시땅 대표전화:(02) 2054-0500  <br>
+                                록시땅 대표메일:loccitane@loccitane.co.29HD250A15_KR <br>
+                                록시땅 플러스친구:@록시땅 <br>
+                                *업무시간:평일 오전 10시~오후 5시,공휴알 제외 <br>
+                                결제 문의:1588-4954
+                            </p>
+                        </div>
+                    </div><!-- text end -->
+            </div><!-- inner end -->
+        </section><!-- notice end -->
+    </main>
+    <footer id="footer"></footer>
+</body>
+</html>

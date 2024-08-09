@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'LINESeed';
+    src: url('font/lineseed/LINESeedSansKRbeta2-Bold.eot');
+    src: url('font/lineseed/LINESeedSansKRbeta2-Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/lineseed/LINESeedSansKRbeta2-Bold.woff2') format('woff2'),
+        url('font/lineseed/LINESeedSansKRbeta2-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LINESeed';
+    src: url('font/lineseed/LINESeedSansKRbeta2-Regular.eot');
+    src: url('font/lineseed/LINESeedSansKRbeta2-Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/lineseed/LINESeedSansKRbeta2-Regular.woff2') format('woff2'),
+        url('font/lineseed/LINESeedSansKRbeta2-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LINESeed';
+    src: url('font/lineseed/LINESeedSansKR-Thin.eot');
+    src: url('font/lineseed/LINESeedSansKR-Thin.eot?#iefix') format('embedded-opentype'),
+        url('font/lineseed/LINESeedSansKR-Thin.woff2') format('woff2'),
+        url('font/lineseed/LINESeedSansKR-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

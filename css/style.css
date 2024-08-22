@@ -104,11 +104,11 @@
 .swiper-button-prev{
     width: 6.5rem;
     height: 6.5rem;
-    background: url('/img/icons8-prev-60.png')center center / 100% no-repeat;
+    background: url(/img/icons8-prev-60.png)center center / 100% no-repeat;
     opacity: 0.5;
 }
 .swiper-button-next{
-    background-image: url('/img/icons8-right-button-60.png');
+    background-image: url(/img/icons8-right-button-60.png);
 }
 .swiper-button-next::after,
 .swiper-button-prev::after{

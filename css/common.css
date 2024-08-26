@@ -120,6 +120,9 @@ body::-webkit-scrollbar{
 .tablet{
     display: none;
 }
+.mobile{
+    display: none;
+}
 #header{
     z-index: 9;
 }
@@ -221,7 +224,7 @@ body::-webkit-scrollbar{
 #header .inner .pc_nav02 .gnb > li .depth01:hover{
     font-weight: bold;
 }
-#header .inner .pc_nav02 .gnb > li .depth01:hover{}
+
 #header .inner .pc_nav02 .gnb > li .depth02{
     display: none;
     position: absolute;
@@ -363,9 +366,7 @@ body::-webkit-scrollbar{
     html{
         font-size: 50%;
     }
-/*     body.on{
-        background-color: #000000a2;
-    } */
+
     #header .inner{
         height: 100px;
         width: calc(100% - 30px);
@@ -468,6 +469,7 @@ body::-webkit-scrollbar{
         background-color: #f4f3ee;
         padding: 20px;
         display: none;
+        margin-top: 20px;
     }
     #header .inner .tab_btn .tab_nav .gnb > li .depth01.item::before{
         content: '';
@@ -493,7 +495,7 @@ body::-webkit-scrollbar{
     } 
     #header .inner .tab_btn .tab_nav .gnb > li .depth02 .flex .menu01{
         position: relative;
-        /* padding: 20px 0; */
+        padding: 20px 0;
     } 
     #header .inner .tab_btn .tab_nav .gnb > li .depth02 .flex .menu01::before{
         content: '';
@@ -508,4 +510,192 @@ body::-webkit-scrollbar{
         display: none;
     }
     #header .inner .tab_btn .tab_nav .gnb > li .depth02 .flex .menu01 li{} 
+    
+    #footer .inner .list .item ul li{
+        font-size: 12px;
+    }
+    #footer .inner .list02 .text span{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:390px){
+    html{
+        font-size: 37.5%;
+    }
+    .tablet{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    #header{
+        height: 130px;
+    }
+    #header .inner .mob_btn .mob_flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    #header .inner .mob_btn .mob_flex h1 a img{
+        height: 30px;
+    }
+    #header .inner .mob_btn .mob_flex .menu{
+        display: flex;
+        gap: 20px;
+    }
+    #header .inner .mob_btn .mob_flex .menu li a img{
+        height: 17px;
+    }
+    #header .inner .mob_btn .search{
+        width: 360px;
+        height: 40px;
+        position: relative;
+    }
+    #header .inner .mob_btn .search input{
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-color: transparent;
+        padding: 0 50px;
+        border: 1px solid #9d9d9d;
+    }
+    #header .inner .mob_btn .search img{
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        left: 26px;
+        transform: translateY(-50%);
+        opacity: 0.5;
+    }
+    #header .inner .mob_btn .mob_nav{
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        overflow: scroll;
+        z-index: 9;
+        transition: 0.7s;
+    }
+    #header .inner .mob_btn .mob_nav.on{
+        left: 0;
+    }
+    #header .inner .mob_btn .mob_nav::-webkit-scrollbar{
+        display: none;
+    }
+    #header .inner .mob_btn .mob_nav .close{
+        display: block;
+        margin: 17px;
+        margin-left: 355px;
+        cursor: pointer;
+    }
+    #header .inner .mob_btn .mob_nav .close img{
+        height: 16px;
+    }
+    #header .inner .mob_btn .mob_nav .gnb{
+        /* padding: 25px 0; */
+    }
+    #header .inner .mob_btn .mob_nav .gnb > li{
+        padding: 25px 0;
+        position: relative;
+    }
+    #header .inner .mob_btn .mob_nav .gnb > li .depth01{
+        font-size: 15px;
+        margin-bottom: 20px;
+        padding: 20px;
+        position: relative;
+    }
+    #header .inner .mob_btn .mob_nav .gnb > li .depth02 {
+        background-color: #f4f3ee;
+        padding: 20px;
+        display: none;
+        margin-top: 20px;
+    }
+    #header .inner .mob_btn .mob_nav .gnb > li .depth01.item::before{
+        content: '';
+        width: 15px;
+        height: 8px;
+        background: url(../img/icons8-down-30.png) right center / 100% no-repeat;
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+    }
+    #header .inner .mob_btn .mob_nav .gnb > li .depth02 .flex .menu01 li:nth-child(1){
+        padding: 15px 0;
+    }
+    #header .inner .mob_btn .mob_nav .gnb > li .depth02 .flex .menu01 .menu02_flex .menu02 li:nth-child(1){
+        padding: 0;
+    }
+    #header .inner .mob_btn .mob_nav .gnb > li .depth02 .flex .menu01 li{
+        line-height: 1.6;
+    }
+    #header .inner .mob_btn .mob_nav .gnb > li .depth02 .flex .menu01 li strong{
+        font-weight: 600;
+    } 
+    #header .inner .mob_btn .mob_nav .gnb > li .depth02 .flex .menu01{
+        position: relative;
+        padding: 20px 0;
+    } 
+    #header .inner .mob_btn .mob_nav .gnb > li .depth02 .flex .menu01::before{
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #a7a7a7;
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+    } 
+    #header .inner .mob_btn .mob_nav .gnb > li .depth02 .flex .menu01:last-child::before{
+        display: none;
+    }
+
+    #footer{
+        padding: 20px 0;
+    }
+    #footer .inner{
+        width: calc(100% - 30px);
+    }
+    #footer .inner .list{
+        display: block;
+    }
+    #footer .inner .list .item h5{
+        margin: 0;
+        font-size: 16px;
+        padding: 25px 0;
+        position: relative;
+    }
+    #footer .inner .list .item h5::before{
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #ffffffad;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    #footer .inner .list .item h5::after{
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: url(/img/-icons8-down-30.png)center center / 100% no-repeat;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+    #footer .inner .list .item ul{
+        display: none;
+    }
+    #footer .inner .list .item:last-child{
+        display: none;
+    }
+    #footer .inner .list02 .text{
+        display: none;
+    }
+    #footer .inner .list02 ul{
+        display: none;
+    }
 }

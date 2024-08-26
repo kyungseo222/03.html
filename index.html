@@ -24,8 +24,8 @@
             //main_visual
 
             var swiper = new Swiper(".best_img", {
-                slidesPerView: 1,
-                spaceBetween: 10,
+                slidesPerView: 2,
+                spaceBetween: 0,
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
@@ -33,7 +33,7 @@
                 breakpoints: {
                     640: {
                     slidesPerView: 2,
-                    spaceBetween: 20,
+                    spaceBetween: 10,
                     },
                     960: {
                     slidesPerView: 3,
@@ -55,7 +55,7 @@
             //best
 
             var swiper = new Swiper(".collSwiper", {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 10,
             pagination: {
                 el: ".swiper-pagination",
@@ -124,23 +124,37 @@
             <div class="swiper main_img">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <figure>
+                    <figure class="pc">
                         <img src="img/main01.jpg" alt="사진">
+                    </figure>
+                    <figure class="tablet">
+                        <img src="img/main01.jpg" alt="사진">
+                    </figure>
+                    <figure class="mobile mobile_img">
+                        <img src="img/mobile_visual02.jpg" alt="사진">
                     </figure>
                     <div class="text">
                         <h2>회원이라면 누구나! <br>
                             일주일간의 특별한 혜택을 만나보세요.
                         </h2>
-                        <h4>공식몰 멤버십 위크</h4>
-                        <p>기간: 7/22(월)~7/28(일)</p>
+                        <div class="text_flex">
+                            <h4>공식몰 멤버십 위크</h4>
+                            <p>기간: 7/22(월)~7/28(일)</p>
+                        </div><!-- text_flex end -->
                         <span>*공식몰 신규 및 기존 회원 전용</span>
                         <a href="#">자세히보기</a>
                     </div><!-- text end -->
                   </div><!-- swiper-slide end -->
 
                   <div class="swiper-slide">
-                    <figure>
+                    <figure class="pc">
                         <img src="img/main02.jpg" alt="사진">
+                    </figure>
+                    <figure class="tablet">
+                        <img src="img/main02.jpg" alt="사진">
+                    </figure>
+                    <figure class="mobile mobile_img">
+                        <img src="img/mobile_visual.jpg" alt="사진">
                     </figure>
                     <div class="text">
                         <h2>2024 제라늄 버베나 컬렉션</h2>
@@ -150,8 +164,14 @@
                   </div><!-- swiper-slide end -->
 
                   <div class="swiper-slide">
-                    <figure>
+                    <figure class="pc">
                         <img src="img/main03.jpg" alt="사진">
+                    </figure>
+                    <figure class="tablet">
+                        <img src="img/main03.jpg" alt="사진">
+                    </figure>
+                    <figure class="mobile mobile_img">
+                        <img src="img/20240617home2_768x440(mobile).jpg" alt="사진">
                     </figure>
                     <div class="text">
                         <h2>무더운 여름
@@ -258,8 +278,8 @@
                         <figure>
                             <img src="img/menu02_1.jpg" alt="img">
                         </figure>
-                        <p><strong>7만원 이상 구매 시</strong> <br>
-                        라벤더 릴랙싱 키트 증정</p>
+                        <strong>7만원 이상 구매 시</strong>
+                        <p>라벤더 릴랙싱 키트 증정</p>
                         <span>
                             *7/22(월)~7/28(일) 멤버십 위크 한정 <br>
                             *세트 구매 시 제외
@@ -270,8 +290,8 @@
                         <figure>
                             <img src="img/menu02_2.jpg" alt="img">
                         </figure>
-                        <p><strong>10만원 이상 구매 시</strong> <br>
-                        바캉스 바디 케어 키트 증정</p>
+                        <strong>10만원 이상 구매 시</strong>
+                        <p>바캉스 바디 케어 키트 증정</p>
                         <span>
                             *7/22(월)~7/28(일) 멤버십 위크 한정 <br>
                             *세트 구매 시 제외
@@ -282,8 +302,8 @@
                         <figure>
                             <img src="img/menu02_3.jpg" alt="img">
                         </figure>
-                        <p><strong>15만원 이상 구매 시</strong> <br>
-                        바캉스 헤어 & 바디 키트 증정</p>
+                        <strong>15만원 이상 구매 시</strong>
+                        <p>바캉스 헤어 & 바디 키트 증정</p>
                         <span>
                             *7/22(월)~7/28(일) 멤버십 위크 한정 <br>
                             *세트 구매 시 제외
@@ -497,8 +517,14 @@
 
         <section class="coll">
             <div class="top">
-                <figure>
+                <figure class="pc">
                     <img src="img/main02.jpg" alt="img">
+                </figure>
+                <figure class="tablet">
+                    <img src="img/main02.jpg" alt="img">
+                </figure>
+                <figure class="mobile">
+                    <img src="img/mobile_visual.jpg" alt="img">
                 </figure>
                 <div class="text">
                     <h4>2024 리미티드 에디션</h4>
@@ -527,7 +553,7 @@
                                 </div><!-- badge end -->
                                 <div class="text">
                                     <span>공식몰 단독</span>
-                                    <h5>[기프트] 리미티드 버베나 샤워 젤 듀오 (+버베나 아이시 & 제라늄 버베나)</h5>
+                                    <h5>[기프트] 리미티드 버베나 샤워 젤 듀오 (+버베나 아이시&제라늄 버베나)</h5>
                                     <strong>66,000원</strong>
                                 </div><!-- text end -->
                             </a>

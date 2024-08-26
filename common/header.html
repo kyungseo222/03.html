@@ -46,6 +46,30 @@
             $(this).next().slideUp();
         }
     });
+
+    let mobOpen = $('.mob_btn .menu_open');
+    let mobClose = $('.mob_nav .close');
+    let mobMenu = $('.mob_nav');
+    let mobileMenu = $('.mob_nav .depth01')
+    let mobMenu02 = $('.mob_nav .depth02')
+    let mobMenu02_1 = document.querySelectorAll('.mob_nav .depth02')
+
+    mobOpen.click(function(){
+        mobMenu.addClass('on')
+        $('body').addClass('on')
+    });
+    mobClose.click(function(){
+        mobMenu.removeClass('on')
+        $('body').removeClass('on')
+    });
+    mobileMenu.click(function(){
+        if($(this).next().css('display') === 'none'){
+            mobMenu02.slideUp();
+            $(this).next().slideDown();
+        } else{
+            $(this).next().slideUp();
+        }
+    });
     
 </script>
 <div class="inner">
@@ -456,6 +480,315 @@
         </div><!-- tab_flex end -->
 
         <nav class="tablet tab_nav">
+            <div class="close">
+                <img src="img/icons8-close-24.png" alt="닫기">
+            </div>
+            <ul class="gnb">
+                <li>
+                    <a href="#" class="depth01">썸머 브리즈</a>
+                </li>
+    
+                <li>
+                    <a href="#" class="depth01">선물 추천</a>
+                    <ul class="depth02">
+                        <div class="flex">
+                            <div class="menu01">
+                                <li><a href="#"><strong>기프트 테마</strong></a></li>
+                                <li><a href="#">베스트셀러 기프트 <span>(9)</span></a></li>
+                                <li><a href="#">스몰럭셔리 기프트 <span>(74)</span></a></li>
+                                <li><a href="#">결혼/집들이 기프트 <span>(29)</span></a></li>
+                                <li><a href="#">임신/출산 기프트 <span>(10)</span></a></li>
+                                <li><a href="#">축하/응원의 기프트 <span>(28)</span></a></li>
+                                <li><a href="#">리미티드 에디션 <span>(8)</span></a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>기프트 세트</strong></a></li>
+                                <li><a href="#">핸드 케어 세트 <span>(30)</span></a></li>
+                                <li><a href="#">바디 케어 세트 <span>(16)</span></a></li>
+                                <li><a href="#">스킨 케어 세트 <span>(2)</span></a></li>
+                                <li><a href="#">헤어 케어 세트 <span>(10)</span></a></li>
+                                <li><a href="#">홈 & 향수 세트 <span>(19)</span></a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>기프트 아이디어</strong></a></li>
+                                <li><a href="#">3만원대 기프트 <span>(59)</span></a></li>
+                                <li><a href="#">5만원대 기프트 <span>(13)</span></a></li>
+                                <li><a href="#">10만원대 기프트 <span>(18)</span></a></li>
+                            </div><!-- maenu01 end -->
+                        </div><!-- flex end -->
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="#" class="depth01">이 달의 프로모션</a>
+                </li>
+    
+                <li>
+                    <a href="#" class="depth01">베스트셀러</a>
+                </li>
+    
+                <li>
+                    <a href="#" class="depth01">핸드 케어</a>
+                    <ul class="depth02">
+                        <div class="flex">
+                            <div class="menu01">
+                                <li><a href="#"><strong>핸드 케어 전체 보기</strong></a></li>
+                                <li><a href="#">핸드 케어 전체 보기 <span>(78)</span></a></li>
+                                <li><a href="#">핸드 케어 에코 리필 <span>(1)</span></a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>제품 타입</strong></a></li>
+                                <li><a href="#">핸드 크림 <span>(47)</span></a></li>
+                                <li><a href="#">핸드 워시 <span>(6)</span></a></li>
+                                <li><a href="#">핸드 & 네일 케어 <span>(6)</span></a></li>
+                                <li><a href="#">솝 <span>(13)</span></a></li>
+                                <li><a href="#">핸드 악세서리 <span>(2)</span></a></li>
+                                <li><a href="#">핸드 케어 기프트 세트 <span>(27)</span></a></li>
+                            </div><!-- maenu01 end -->
+                        </div><!-- flex end -->
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="#" class="depth01">바디 케어</a>
+                    <ul class="depth02">
+                        <div class="flex">
+                            <div class="menu01">
+                                <li><a href="#"><strong>바디 케어 전체 보기</strong></a></li>
+                                <li><a href="#">바디 케어 전체 보기 <span>(94)</span></a></li>
+                                <li><a href="#">바디 케어 에코 리필 <span>(4)</span></a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>제품 타입</strong></a></li>
+                                <li><a href="#">바스 & 샤워 젤 <span>(38)</span></a></li>
+                                <li><a href="#">바디 로션 & 크림 <span>(29)</span></a></li>
+                                <li><a href="#">비누 <span>(9)</span></a></li>
+                                <li><a href="#">바디 / 마사지 오일 <span>(4)</span></a></li>
+                                <li><a href="#">바디 스크럽 <span>(5)</span></a></li>
+                                <li><a href="#">바디 미스트 <span>(9)</span></a></li>
+                                <li><a href="#">풋 케어 <span>(1)</span></a></li>
+                                <li><a href="#">바디 케어 기프트 세트 <span>(15)</span></a></li>
+                            </div><!-- maenu01 end -->
+                        </div><!-- flex end -->
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="#" class="depth01">스킨 케어</a>
+                    <ul class="depth02">
+                        <div class="flex">
+                            <div class="menu01">
+                                <li><a href="#"><strong>스킨 케어 전체 보기</strong></a></li>
+                                <li><a href="#">스킨 케어 전체 보기 <span>(49)</span></a></li>
+                                <li><a href="#">스킨 케어 에코 리필 <span>(1)</span></a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>제품 타입</strong></a></li>
+                                <li><a href="#">수분 & 영양 크림 <span>(8)</span></a></li>
+                                <li><a href="#">세럼 & 오일 <span>(12)</span></a></li>
+                                <li><a href="#">클렌져 <span>(11)</span></a></li>
+                                <li><a href="#">토너 / 에센스 <span>(8)</span></a></li>
+                                <li><a href="#">스크럽 / 마스크 <span>(3)</span></a></li>
+                                <li><a href="#">아이 / 넥 케어 <span>(4)</span></a></li>
+                                <li><a href="#">립 케어 <span>(14)</span></a></li>
+                                <li><a href="#">선케어 <span>(1)</span></a></li>
+                                <li><a href="#">스킨 케어 기프트 세트 <span>(1)</span></a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>피부 고민</strong></a></li>
+                                <li><a href="#">수분 보충 & 보습 <span>(11)</span></a></li>
+                                <li><a href="#">탄력 / 광채 <span>(7)</span></a></li>
+                                <li><a href="#">안티에이징 <span>(9)</span></a></li>
+                                <li><a href="#">화이트닝 <span>(5)</span></a></li>
+                                <li><a href="#">피부 진정 <span>(7)</span></a></li>
+                                <li><a href="#">지성 피부 <span>(7)</span></a></li>
+                                <li><a href="#">각질 제거 <span>(1)</span></a></li>
+                                <li><a href="#">립 / 아이 스페셜 케어 <span>(12)</span></a></li>
+                                <li><a href="#">자외선 차단 <span>(1)</span></a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>라인별 스킨 케어</strong></a></li>
+                                <li><a href="#">시어 버터 <span>(14)</span></a></li>
+                                <li><a href="#">이모르뗄 <span>(18)</span></a></li>
+                                <li><a href="#">렌느 블랑쉬 <span>(6)</span></a></li>
+                            </div><!-- maenu01 end -->
+                        </div><!-- flex end -->
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="#" class="depth01">헤어 케어</a>
+                    <ul class="depth02">
+                        <div class="flex">
+                            <div class="menu01">
+                                <li><a href="#"><strong>헤어 케어 전체 보기</strong></a></li>
+                                <li><a href="#">헤어 케어 전체 보기 <span>(43)</span></a></li>
+                                <li><a href="#">헤어 케어 에코 리필 <span>(6)</span></a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>제품 타입</strong></a></li>
+                                <li><a href="#">샴푸 <span>(18)</span></a></li>
+                                <li><a href="#">컨디셔너 <span>(13)</span></a></li>
+                                <li><a href="#">헤어 오일 & 에센스 <span>(8)</span></a></li>
+                                <li><a href="#">헤어 마스트 / 트리트먼트 <span>(3)</span></a></li>
+                                <li><a href="#">헤어 바 <span>(1)</span></a></li>
+                                <li><a href="#">헤어 케어 기프트 세트 <span>(8)</span></a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>헤어 고민</strong></a></li>
+                                <li><a href="#">건조한 두피 & 손상 모발 <span>(15)</span></a></li>
+                                <li><a href="#">두피 활력 & 가는 모발 <span>(11)</span></a></li>
+                                <li><a href="#">지성 두피 & 수분 부족 모발 <span>(14)</span></a></li>
+                                <li><a href="#">민감 두피 & 건조한 모발 <span>(9)</span></a></li>
+                            </div><!-- maenu01 end -->
+                        </div><!-- flex end -->
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="#" class="depth01">맨즈 케어</a>
+                    <ul class="depth02">
+                        <div class="flex">
+                            <div class="menu01">
+                                <li><a href="#"><strong>맨즈 케어 전체 보기</strong></a></li>
+                                <li><a href="#">맨즈 케어 전체 보기 <span>(41)</span></a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>제품 타입</strong></a></li>
+                                <li><a href="#">스킨 케어 <span>(11)</span></a></li>
+                                <li><a href="#">바디워시 / 샤워젤 <span>(4)</span></a></li>
+                                <li><a href="#">바디 로션 <span>(6)</span></a></li>
+                                <li><a href="#">핸드 케어 <span>(13)</span></a></li>
+                                <li><a href="#">쉐이빙 <span>(4)</span></a></li>
+                                <li><a href="#">향수 <span>(2)</span></a></li>
+                                <li><a href="#">맨즈 케어 기프트 세트 <span>(1)</span></a></li>
+                            </div><!-- maenu01 end -->
+                        </div><!-- flex end -->
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="#" class="depth01">향수 & 홈 프래그런스</a>
+                    <ul class="depth02">
+                        <div class="flex">
+                            <div class="menu01">
+                                <li><a href="#"><strong>향수 & 홈 케어 전체 보기</strong></a></li>
+                                <li><a href="#">향수 & 홈 케어 전체 보기 <span>(20)</span></a></li>
+                                <li><a href="#">홈 프래그런스 리필 <span>(2)</span></a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>향</strong></a></li>
+                                <li><a href="#">버베나 <span>(8)</span></a></li>
+                                <li><a href="#">체리 블라썸 <span>(1)</span></a></li>
+                                <li><a href="#">로즈 <span>(2)</span></a></li>
+                                <li><a href="#">에르베 <span>(2)</span></a></li>
+                                <li><a href="#">쎄드라 <span>(1)</span></a></li>
+                                <li><a href="#">코쿤 드 세레니떼 <span>(2)</span></a></li>
+                                <li><a href="#">포가튼 플라워 <span>(3)</span></a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>향수</strong></a></li>
+                                <li><a href="#">여성용 향수 <span>(19)</span></a></li>
+                                <li><a href="#">남성용 향수 <span>(7)</span></a></li>
+                                <li><a href="#">홈 프래그런스 <span>(7)</span></a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>홈</strong></a></li>
+                                <li><a href="#">홈 퍼퓸 / 미스트 <span>(4)</span></a></li>
+                                <li><a href="#">디퓨저 / 리필 <span>(2)</span></a></li>
+                                <li><a href="#">홈 기프트 세트 <span>(1)</span></a></li>
+                            </div><!-- maenu01 end -->
+                        </div><!-- flex end -->
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="#" class="depth01">라인별 컬렉션</a>
+                    <ul class="depth02">
+                        <div class="flex">
+                            <div class="menu01">
+                                <li><a href="#"><strong>라인별 컬렉션</strong></a></li>
+                                <div class="menu02_flex">
+                                    <div class="menu02">
+                                        <li><a href="#">아몬드</a></li>
+                                        <li><a href="#">5 에센셜 오일</a></li>
+                                        <li><a href="#">버베나</a></li>
+                                        <li><a href="#">시어 버터</a></li>
+                                        <li><a href="#">체리 블라썸</a></li>
+                                        <li><a href="#">로즈</a></li>
+                                        <li><a href="#">이모르뗄 리셋</a></li>
+                                        <li><a href="#">이모르뗄 디바인</a></li>
+                                        <li><a href="#">이모르뗄 프레셔스</a></li>
+                                    </div><!-- menu02 end -->
+                                    <div class="menu02">
+                                        <li><a href="#">이모르뗄 드 비브레 홈 컬렉션</a></li>
+                                        <li><a href="#">라벤더</a></li>
+                                        <li><a href="#">에르베</a></li>
+                                        <li><a href="#">피어니</a></li>
+                                        <li><a href="#">꺄드</a></li>
+                                        <li><a href="#">쎄드라</a></li>
+                                        <li><a href="#">아쿠아 레오티에</a></li>
+                                        <li><a href="#">렌느 블랑쉬</a></li>
+                                        <li><a href="#">수르스 레오티에</a></li>
+                                    </div><!-- menu02 end -->
+                                    <div class="menu02">
+                                        <li><a href="#">아티쵸크</a></li>
+                                        <li><a href="#">포가튼 플라워</a></li>
+                                        <li><a href="#">팜플무스 루바브</a></li>
+                                        <li><a href="#">떼르 드 루미에르</a></li>
+                                    </div><!-- menu02 end -->
+                                </div>
+                            </div><!-- maenu01 end -->
+                        </div><!-- flex end -->
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="#" class="depth01">지속가능성</a>
+                    <ul class="depth02">
+                        <div class="flex">
+                            <div class="menu01">
+                                <li><a href="#"><strong>지속가능성 이야기</strong></a></li>
+                                <li><a href="#">All About L'Occitane</a></li>
+                                <li><a href="#">록시땅의 6가지 약속</a></li>
+                                <li><a href="#">B Corp 인증</a></li>
+                                <li><a href="#">Reducing Waste</a></li>
+                                <li><a href="#">Respecting Biodiversity</a></li>
+                            </div><!-- maenu01 end -->
+                            <div class="menu01">
+                                <li><a href="#"><strong>록시땅코리아 이야기</strong></a></li>
+                                <li><a href="#">국내 사회 공헌 활동</a></li>
+                                <li><a href="#">Rethink Beauty 캠페인</a></li>
+                            </div><!-- maenu01 end -->
+                        </div><!-- flex end -->
+                    </ul>
+                </li>
+            </ul>
+        </nav><!-- tab_nav end -->
+    </nav><!-- tab_btn end -->
+
+    <nav class="mobile mob_btn">
+        <div class="mob_flex">
+            <h1>
+                <a href="#">
+                    <img src="img/logo.svg" alt="logo">
+                </a>
+            </h1>
+            <ul class="menu">
+                <li><a href="#"><img src="img/icons8-place-marker-64.png" alt="매장"></a></li>
+                <li><a href="#"><img src="img/icons8-ask-question-48.png" alt="도움말"></a></li>
+                <li><a href="#"><img src="img/icons8-account-48.png" alt="가입/정보수정"></a></li>
+                <li><a href="#"><img src="img/icons8-shopping-bag-32.png" alt="장바구니"></a></li>
+                <li class="menu_open"><a href="#"><img src="img/icons8-menu-50.png" alt="메뉴"></a></li>
+            </ul><!-- menu end -->
+        </div><!-- tab_flex end -->
+
+        <div class="search">
+            <input type="text" placeholder="검색하기">
+            <img src="img/icons8-search-30.png" alt="돋보기">
+        </div><!-- search end -->
+
+        <nav class="mobile mob_nav">
             <div class="close">
                 <img src="img/icons8-close-24.png" alt="닫기">
             </div>

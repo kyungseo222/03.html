@@ -107,11 +107,11 @@
 .swiper-button-prev{
     width: 6.5rem;
     height: 6.5rem;
-    background: url(/img/icons8-prev-60.png)center center / 100% no-repeat;
+    background: url(../img/icons8-prev-60.png)center center / 100% no-repeat;
     opacity: 0.5;
 }
 .swiper-button-next{
-    background-image: url(/img/icons8-right-button-60.png);
+    background-image: url(../img/icons8-right-button-60.png);
 }
 .swiper-button-next::after,
 .swiper-button-prev::after{
@@ -493,13 +493,13 @@ section .inner{
 .best_img .swiper-button-prev{
     width: 4rem;
     height: 4rem;
-    background: url(/img/icons8-back-50.png)center center / 100% no-repeat;
+    background: url(../img/icons8-back-50.png)center center / 100% no-repeat;
     opacity: 0;
     top: 45%;
     transition: 0.7s;
 }
 .best_img .swiper-button-next{
-    background-image: url(/img/icons8-forward-50.png);
+    background-image: url(../img/icons8-forward-50.png);
     opacity: 0;
     transition: 0.7s;
 }
@@ -772,13 +772,13 @@ section .inner{
 .collSwiper .swiper-button-prev{
     width: 4rem;
     height: 4rem;
-    background: url(/img/icons8-back-50.png)center center / 100% no-repeat;
+    background: url(../img/icons8-back-50.png)center center / 100% no-repeat;
     opacity: 0;
     top: 45%;
     transition: 0.7s;
 }
 .collSwiper .swiper-button-next{
-    background-image: url(/img/icons8-forward-50.png);
+    background-image: url(../img/icons8-forward-50.png);
     opacity: 0;
     transition: 0.7s;
 }
@@ -1033,7 +1033,7 @@ section .inner{
     content: '';
     width: 14px;
     height: 20px;
-    background: url(/img/icons8-forward-50.png)center center / 100% no-repeat;
+    background: url(../img/icons8-forward-50.png)center center / 100% no-repeat;
     position: absolute;
     top: 50%;
     right: 10%;
@@ -1102,7 +1102,7 @@ section .inner{
     content: '';
     width: 20px;
     height: 24px;
-    background: url(/img/icons8-location-24.png)center center / 100% no-repeat;
+    background: url(../img/icons8-location-24.png)center center / 100% no-repeat;
     position: absolute;
     top: 50%;
     left: 0;
@@ -1112,7 +1112,7 @@ section .inner{
     content: '';
     width: 20px;
     height: 24px;
-    background: url(/img/icons8-phone-30.png)center center / 100% no-repeat;
+    background: url(../img/icons8-phone-30.png)center center / 100% no-repeat;
     position: absolute;
     top: 50%;
     left: 0;
@@ -2092,7 +2092,7 @@ section .inner{
         content: '';
         width: 20px;
         height: 20px;
-        background: url(/img/-icons8-down-30.png)center center / 100% no-repeat;
+        background: url(../img/-icons8-down-30.png)center center / 100% no-repeat;
         position: absolute;
         top: 50%;
         right: 0;
@@ -2105,7 +2105,7 @@ section .inner{
         content: '';
         width: 20px;
         height: 20px;
-        background: url(/img/-icons8-down-30.png)center center / 100% no-repeat;
+        background: url(../img/-icons8-down-30.png)center center / 100% no-repeat;
         position: absolute;
         top: 50%;
         right: 0;
@@ -2115,7 +2115,7 @@ section .inner{
         content: '';
         width: 20px;
         height: 20px;
-        background: url(/img/-icons8-down-30.png)center center / 100% no-repeat;
+        background: url(../img/-icons8-down-30.png)center center / 100% no-repeat;
         position: absolute;
         top: 50%;
         right: 0;

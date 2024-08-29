@@ -305,10 +305,10 @@ body::-webkit-scrollbar{
     transform: translateY(-50%);
 }
 #header .inner .pc_nav02 .gnb li:nth-child(2) .depth01.item::after{
-    background-image: url(/img/icons8-down-30.red.png);
+    background-image: url(../img/icons8-down-30.red.png);
 }
 #header .inner .pc_nav02 .gnb li:nth-child(12) .depth01.item::after{
-    background-image: url(/img/icons8-down-30.green.png);
+    background-image: url(../img/icons8-down-30.green.png);
 }
 
 #footer{
